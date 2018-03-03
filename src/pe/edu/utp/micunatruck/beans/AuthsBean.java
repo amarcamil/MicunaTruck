@@ -8,7 +8,6 @@ import pe.edu.utp.micunatruck.utils.SessionUtils;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.SessionScoped;
-//import javax.faces.bean.ManagedBean;
 import javax.inject.Named;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -19,7 +18,6 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 @Named
-//@ManagedBean
 @SessionScoped
 public class AuthsBean implements Serializable {
     private MicunaTruckService micunaTruckService;
@@ -33,13 +31,11 @@ public class AuthsBean implements Serializable {
     @Constructor
     protected void authInit(){
         micunaTruckService = new MicunaTruckService();
-        micunaTruckService.setConnection(getConnection());
     }
 
     @PostConstruct
     protected void init() {
         micunaTruckService = new MicunaTruckService();
-        micunaTruckService.setConnection(getConnection());
     }
 
     public String getEmail() {
@@ -105,25 +101,6 @@ public class AuthsBean implements Serializable {
             this.setMsjError("An error occurred. Please, contact the administrator.");
             return  "error";
         }
-    }
-
-    private Connection getConnection() {
-        try{
-            if(connection == null) {
-                try {
-                    InitialContext ctx = new InitialContext();
-                    DataSource dataSource = (DataSource)ctx.lookup("jdbc/MySQLDataSourceMicunaTruck");
-                    connection = dataSource.getConnection();
-
-                } catch (NamingException | SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
-        return connection;
     }
 
     public String logout() {
