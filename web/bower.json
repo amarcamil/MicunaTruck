@@ -1,0 +1,23 @@
+{
+  "name": "micunatruck",
+  "description": "micunatruck web site",
+  "main": "index.js",
+  "authors": [
+    "AmarcamiL"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/amarcamil/MicunaTruck",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "angular": "^1.6.9"
+  }
+}
