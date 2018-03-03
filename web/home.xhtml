@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Start Page</title>
+    <!--<link href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/dist/css/MicunaTruck.css" rel="stylesheet" />
+</head>
+<body>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+    <h5 class="my-0 mr-md-auto font-weight-normal">Micuna Truck</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="#">Support</a>
+        <a class="p-2 text-dark" href="#">Pricing</a>
+    </nav>
+    <h:form>
+        <h:commandLink styleClass="btn btn-outline-primary" action="#{authsBean.signIn}">Sign In</h:commandLink>
+        <!--<a class="btn btn-outline-primary" href="#">Sign In</a>-->
+    </h:form>
+</div>
+<div class="pricing-header px-3 py-3 pt-md-4 pb-md-3 mx-auto text-center">
+    <h1 class="display-4">Micuna Truck</h1>
+    <p class="lead">Join our family We are a company with aspirations to be the best in our field. In addition, we consider that our customers are the most important for us.</p>
+</div>
+<div class="container">
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 box-shadow">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">FoodTruck</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">User <small class="text-muted">FoodTruck</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>List of Events</li>
+                    <li>Postulate</li>
+                    <li>Profile</li>
+                    <li>Help</li>
+                </ul>
+                <!--<a href="users?action=new" style="text-decoration: none;">
+                <button type="submit" class="btn btn-lg btn-block btn-outline-primary">
+                    Register
+                    </button>
+                </a>-->
+            </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Promotor</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">User <small class="text-muted">Promotor</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Create events</li>
+                    <li>See candidates</li>
+                    <li>Choose</li>
+                    <li>Help center access</li>
+                </ul>
+                <!--<a href="users?action=new" style="text-decoration: none;">
+                <button type="button" class="btn btn-lg btn-block btn-primary">Register</button>
+                </a>-->
+            </div>
+        </div>
+    </div>
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 box-shadow">
+            <h:form>
+                <h:commandButton value="Register" styleClass="btn btn-lg btn-block btn-primary" action="#{usersBean.newUser}"/>
+            </h:form>
+        </div>
+    </div>
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+            <div class="col-12 col-md">
+                <img class="mb-2" src="assets/dist/img/logo_micunatruck.png" alt="" width="50" height="50" />
+                <small class="d-block mb-3 text-muted">© 2018</small>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Cool stuff</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Resource</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Team</a></li>
+                    <li><a class="text-muted" href="#">Locations</a></li>
+                    <li><a class="text-muted" href="#">Privacy</a></li>
+                    <li><a class="text-muted" href="#">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</div>
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous" />-->
+<!--<script src="assets/bower_components/jquery/dist/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous" />-->
+<script src="assets/bower_components/jquery/dist/jquery.slim.min.js"/>
+<!--<script src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js" />-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" />
+</body>
+</html>

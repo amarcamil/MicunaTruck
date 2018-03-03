@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:b="http://bootsfaces.net/ui">
+
+<h:head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"/>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            type="application/javascript"/>
+</h:head>
+
+<h:body>
+    <b:container>
+        <b:row>
+            <h:outputLabel value="Gestor Contenido publicitario 02"/>
+            <b:dataTable value="#{adsBean.adsRs}" var="ads">
+                <b:dataTableColumn>
+                    <f:facet name="header">Id</f:facet>
+                    #{ads.id}
+                </b:dataTableColumn>
+                <b:dataTableColumn>
+                    <f:facet name="header">AdminId</f:facet>
+                    #{ads.admin.id}
+                </b:dataTableColumn>
+                <b:dataTableColumn>
+                    <f:facet name="header">Name</f:facet>
+                    #{ads.name}
+                </b:dataTableColumn>
+                <b:dataTableColumn>
+                    <f:facet name="header">Description</f:facet>
+                    #{ads.description}
+                </b:dataTableColumn>
+                <b:dataTableColumn>
+                    <f:facet name="header">Image</f:facet>
+                    #{ads.image}
+                </b:dataTableColumn>
+                <b:dataTableColumn>
+                    <f:facet name="header">price</f:facet>
+                    #{ads.price}
+                </b:dataTableColumn>
+                <b:dataTableColumn>
+                    <f:facet name="header">Start Date</f:facet>
+                    #{ads.start_date}
+                </b:dataTableColumn>
+                <b:dataTableColumn>
+                    <f:facet name="header">End Date</f:facet>
+                    #{ads.end_date}
+                </b:dataTableColumn>
+                <b:dataTableColumn>
+                    <f:facet name="header">FlagActive</f:facet>
+                    #{ads.flagActive}
+                </b:dataTableColumn>
+                <b:dataTableColumn>
+                    <f:facet name="header">UpdatedAt</f:facet>
+                    #{ads.updatedAt}
+                </b:dataTableColumn>
+                <b:dataTableColumn>
+                    <f:facet name="header">CreatedAt</f:facet>
+                    #{ads.createdAt}
+                </b:dataTableColumn>
+                <b:dataTableColumn>
+                    <f:facet name="header">CodeSpace</f:facet>
+                    #{ads.codeSpace}
+                </b:dataTableColumn>
+                <b:dataTableColumn>
+                    <f:facet name="header">Actions</f:facet>
+                    <h:form>
+                        <h:commandButton value="Edit" action="#{adsBean.editAds(ads)}"/>
+                        <h:commandButton value="Delete" action="#{adsBean.deleteAds(ads)}"/>
+                    </h:form>
+                </b:dataTableColumn>
+            </b:dataTable>
+            <h:form>
+                <h:commandButton value="New" action="#{adsBean.newAds}"/>
+            </h:form>
+        </b:row>
+    </b:container>
+</h:body>
+</html>
