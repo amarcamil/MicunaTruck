@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui">
+<f:view>
+    <ui:composition template="/layouts/main.xhtml">
+        <ui:define name="title">
+            MIKUNATRUCK EVENTOS
+        </ui:define>
+        <ui:define name="head">
+            <link rel="stylesheet" href="assets/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css"/>
+        </ui:define>
+        <ui:define name="foot">
+            <!-- DataTables -->
+            <script src="assets/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+            <script src="assets/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+            <!-- page script -->
+            <script>
+                $(function () {
+                    $('#eventTable').DataTable({
+                        // 'paging'      : true,
+                        // 'lengthChange': false,
+                        'searching'   : false//,
+                        // 'ordering'    : true,
+                        // 'info'        : true,
+                        // 'autoWidth'   : false
+                    })
+                })
+            </script>
+        </ui:define>
+        <ui:define name="content">
+
+
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+                    Eventos
+                    <small>Listado</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
+                    <li class="active">Eventos</li>
+                </ol>
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="box">
+                    <div class="box-header">
+                        <div class="col-sm-6">
+                            <h3 class="box-title">Listado de eventos</h3>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <h:form>
+                                <!--<a class="btn btn-primary" href="event-new.xhtml">Agregar evento</a>-->
+                                <h:commandLink class="btn btn-primary"  value="Agregar evento" action="#{eventsBean.newEvent}"/>
+                            </h:form>
+                        </div>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+
+
+                        <table id="eventTable" class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nombre</th>
+                                <th>Fecha</th>
+                                <th>Portada</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <ui:repeat value="#{eventsBean.eventsByUser}" var="event">
+                                <tr>
+                                    <td>#{event.id}</td>
+                                    <td>#{event.name}</td>
+                                    <td>#{event.dateParse}</td>
+                                    <td>#{event.image}</td>
+                                    <td>#{event.eventStatus.name}</td>
+                                    <td>
+                                        <div class="btn-group text-center">
+                                            <h:form>
+                                                <h:commandLink title="Ver postulantes" type="button" class="btn info" action="#{aplicantsBean.applicantsByEvent(event)}">
+                                                    <i class="fa fa-users"></i>
+                                                </h:commandLink>
+                                                <h:commandLink title="Editar evento" type="button" class="btn btn-success" action="#{eventsBean.editEvent(event)}">
+                                                    <i class="fa fa-edit"></i>
+                                                </h:commandLink>
+                                                <h:commandLink rendered="#{event.eventStatus.id == 1}" title="Cancelar evento" type="button" class="btn btn-warning" action="#{eventsBean.cancelEvent(event)}">
+                                                    <i class="fa fa-exclamation-circle"></i>
+                                                </h:commandLink>
+                                                <h:commandLink title="Eliminar evento" type="button" class="btn btn-danger" action="#{eventsBean.deleteEvent(event)}">
+                                                    <i class="fa fa-close"></i>
+                                                </h:commandLink>
+                                            </h:form>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </ui:repeat>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nombre</th>
+                                <th>Fecha</th>
+                                <th>Portada</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+            </section>
+
+        </ui:define>
+    </ui:composition>
+</f:view>
+</html>
