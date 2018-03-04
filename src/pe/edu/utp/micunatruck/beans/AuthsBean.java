@@ -9,13 +9,8 @@ import pe.edu.utp.micunatruck.utils.SessionUtils;
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
 import javax.servlet.http.HttpSession;
-import javax.sql.DataSource;
 import java.io.Serializable;
-import java.sql.Connection;
-import java.sql.SQLException;
 
 @Named
 @SessionScoped
@@ -23,7 +18,6 @@ public class AuthsBean implements Serializable {
     private MicunaTruckService micunaTruckService;
     private User user;
     private UserType userType;
-    private Connection connection;
     private String msjError = "";
     private String email;
     private String password;
