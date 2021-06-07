@@ -15,7 +15,7 @@ public class UserTypeEntity extends BaseEntity {
     {
         List<UserType> usersType = null;
         boolean indHasData = false;
-        if(getConnection() != null)
+        if(hasConnection())
         {
             usersType = new ArrayList<>();
             try {

@@ -18,7 +18,7 @@ public class ApplicantsEntity extends BaseEntity {
     {
         List<Applicant> applicants = null;
         boolean indHasData = false;
-        if(getConnection() != null){
+        if(hasConnection()){
             applicants = new ArrayList<>();
             try {
                 ResultSet resultSet = getConnection().createStatement().executeQuery(sql);
@@ -70,7 +70,7 @@ public class ApplicantsEntity extends BaseEntity {
     }
 
     private int updateByCriteria(String sql){
-        if(getConnection() != null){
+        if(hasConnection()){
             try {
                 return getConnection().createStatement().executeUpdate(sql);
             } catch (SQLException e) {
@@ -82,7 +82,7 @@ public class ApplicantsEntity extends BaseEntity {
 
     public Applicant create(User user, Event event, boolean flagActive){
         //if(findByName(name) == null){
-        if(getConnection() != null){
+        if(hasConnection()){
             String sql =
                     "INSERT INTO micunatruck.applicants(" +
                             "user_id, event_id, flag_active, created_at) " +
@@ -111,7 +111,7 @@ public class ApplicantsEntity extends BaseEntity {
 
     private int getMaxId(){
         String sql = "SELECT MAX(id) AS max_id FROM micunatruck.applicants";
-        if(getConnection() != null){
+        if(hasConnection()){
             try {
                 ResultSet resultSet = getConnection().createStatement().executeQuery(sql);
                 return resultSet.next() ? resultSet.getInt("max_id") : 0;

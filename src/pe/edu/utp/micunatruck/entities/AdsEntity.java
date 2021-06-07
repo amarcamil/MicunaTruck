@@ -112,9 +112,8 @@ public class AdsEntity extends BaseEntity {
 
                 int results=updateByCriteria(sql);
                 if (results>0){
-                    Ads ads=new Ads(id,adminsEntity.findById(idadmin),name,description,image,price,
+                    return new Ads(id,adminsEntity.findById(idadmin),name,description,image,price,
                             start_date,end_date,1,findById(id,adminsEntity).getCreatedAt(),code_space);
-                    return ads;
                 }
             }
 

@@ -41,6 +41,7 @@ public class FinancesBeans implements Serializable {
     public void setOriginTypeId(int originTypeId) {
         this.getFinance().setOriginTypeId(originTypeId);
     }
+
     public double getAmount() {
         return this.getFinance().getAmount();
     }
@@ -48,6 +49,7 @@ public class FinancesBeans implements Serializable {
     public void setAmount(double amount) {
         this.getFinance().setAmount(amount);
     }
+
     public Date getStartDate() {
         return this.getFinance().getStartDate();
     }
@@ -63,6 +65,7 @@ public class FinancesBeans implements Serializable {
     public void setEndDate(Date endDate) {
         this.getFinance().setEndDate(endDate);
     }
+
     public boolean getFlagActive() {
         return this.getFinance().getFlagActive();
     }

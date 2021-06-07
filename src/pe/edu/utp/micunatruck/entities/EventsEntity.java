@@ -19,7 +19,7 @@ public class EventsEntity extends BaseEntity {
 
     private List<Event> findByCriteria(String sql, UsersEntity usersEntity, EventStatusEntity eventStatusEntity){
         List<Event> events;
-        if(getConnection() != null){
+        if(hasConnection()){
             events = new ArrayList<>();
             try {
                 ResultSet resultSet = getConnection().createStatement()
@@ -105,7 +105,7 @@ public class EventsEntity extends BaseEntity {
 
     private int getMaxId(){
         String sql = "SELECT MAX(id) AS max_id FROM events";
-        if(getConnection() != null){
+        if(hasConnection()){
             try {
                 ResultSet resultSet = getConnection().createStatement().executeQuery(sql);
                 return resultSet.next() ? resultSet.getInt("max_id") : 0;
@@ -117,7 +117,7 @@ public class EventsEntity extends BaseEntity {
     }
 
     private int updateByCriteria(String sql){
-        if(getConnection() != null){
+        if(hasConnection()){
             try {
                 return getConnection().createStatement().executeUpdate(sql);
             } catch (SQLException e) {
@@ -128,7 +128,7 @@ public class EventsEntity extends BaseEntity {
     }
 
     public Event create(User user, EventStatus eventStatus, String name, String description, String image, String date){
-        if(getConnection() != null){
+        if(hasConnection()){
             Date createdAt = new Date();
             Date dateDb  = null;
             try {

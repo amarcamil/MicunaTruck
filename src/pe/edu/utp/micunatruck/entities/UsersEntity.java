@@ -12,11 +12,11 @@ public class UsersEntity extends BaseEntity {
     private static String DEFAULT_SQL = "SELECT * FROM micunatruck.users ";
     private static String DEFAULT_SQL_UPDATE = "UPDATE micunatruck.users SET ";
 
-    private List<User> findByCriteria(String sql, UserTypeEntity userTypeEntity)
-    {
+    private List<User> findByCriteria(String sql, UserTypeEntity userTypeEntity) {
         List<User> users = null;
         boolean indHasData = false;
-        if(getConnection() != null){
+
+        if(hasConnection()){
             users = new ArrayList<>();
             try {
                 ResultSet resultSet = getConnection().createStatement().executeQuery(sql);
@@ -73,7 +73,7 @@ public class UsersEntity extends BaseEntity {
     }
 
     private int updateByCriteria(String sql){
-        if(getConnection() != null){
+        if(hasConnection()){
             try {
                 return getConnection().createStatement().executeUpdate(sql);
             } catch (SQLException e) {
@@ -87,7 +87,7 @@ public class UsersEntity extends BaseEntity {
                        String description, String photo, String address, String telephone,
                        String email, String password, boolean flagActive){
         if(findByName(name) == null){
-            if(getConnection() != null){
+            if(hasConnection()){
                 String sql =
                         "INSERT INTO micunatruck.users(" +
                                 "user_type_id, name, lastname, legal_name, description, photo, " +
@@ -150,10 +150,14 @@ public class UsersEntity extends BaseEntity {
 
     private int getMaxId(){
         String sql = "SELECT MAX(id) AS max_id FROM micunatruck.users";
-        if(getConnection() != null){
+
+        if(hasConnection()) {
             try {
-                ResultSet resultSet = getConnection().createStatement().executeQuery(sql);
-                return resultSet.next() ? resultSet.getInt("max_id") : 0;
+                ResultSet resultSet = getConnection()
+                        .createStatement()
+                        .executeQuery(sql);
+                return resultSet.next() ?
+                        resultSet.getInt("max_id") : 0;
             } catch (SQLException e) {
                 e.printStackTrace();
             }

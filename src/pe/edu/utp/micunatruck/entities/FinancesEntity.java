@@ -13,7 +13,7 @@ public class FinancesEntity extends BaseEntity {
 
     private List<Finance> findByCriteria(String sql) {
         List<Finance> Finances;
-        if (getConnection() != null) {
+        if (hasConnection()) {
             Finances = new ArrayList<>();
             try {
                 ResultSet resultSet = getConnection().createStatement()
@@ -54,7 +54,7 @@ public class FinancesEntity extends BaseEntity {
 
     private int getMaxId() {
         String sql = "SELECT MAX(id) AS max_id FROM income";
-        if (getConnection() != null) {
+        if (hasConnection()) {
             try {
                 ResultSet resultSet = getConnection().createStatement().executeQuery(sql);
                 return resultSet.next() ? resultSet.getInt("max_id") : 0;
@@ -66,7 +66,7 @@ public class FinancesEntity extends BaseEntity {
     }
 
     private int updateByCriteria(String sql) {
-        if (getConnection() != null) {
+        if (hasConnection()) {
             try {
                 return getConnection().createStatement().executeUpdate(sql);
             } catch (SQLException e) {
@@ -92,7 +92,7 @@ public class FinancesEntity extends BaseEntity {
     public Finance create(int originId, int originTypeId, double amount, Date startDate, Date endDate, boolean flagActive) {
 
         if (findInfoDuplicate(0, startDate, endDate, 0) == null) {
-            if (getConnection() != null) {
+            if (hasConnection()) {
                 int id = getMaxId() + 1;
                 String sql = "INSERT INTO incomes(id,origin_id,origin_type_id,amount,start_date,end_date,flag_active,created_at)" +
                         "values(" + id + "," + originId + ",'" + originTypeId + "','" + amount + "','" + startDate + "'," + endDate + ",1,NOW())";

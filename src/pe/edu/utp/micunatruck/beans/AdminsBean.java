@@ -45,7 +45,6 @@ public class AdminsBean implements Serializable {
 
     public String getPhoto() {
         return this.getAdmin().getPhoto();
-
     }
 
     public void setPhoto(String photo) {

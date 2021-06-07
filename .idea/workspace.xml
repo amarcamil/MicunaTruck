@@ -7,18 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c60f80fb-0706-4a57-a07f-e052d1485f78" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/fc7ca1d3-ea08-45f6-9e96-545a6d6c44ee.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/fc7ca1d3-ea08-45f6-9e96-545a6d6c44ee/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/fc7ca1d3-ea08-45f6-9e96-545a6d6c44ee/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/fc7ca1d3-ea08-45f6-9e96-545a6d6c44ee/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/fc7ca1d3-ea08-45f6-9e96-545a6d6c44ee/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/MicunaTruck_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/MicunaTruck_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicunaTruck.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MicunaTruck.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/services/MicunaTruckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/services/MicunaTruckService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/faces-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/beans/AdminsBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/beans/AdminsBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/beans/FinancesBeans.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/beans/FinancesBeans.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/entities/AdsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/entities/AdsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/entities/ApplicantsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/entities/ApplicantsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/entities/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/entities/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/entities/EventStatusEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/entities/EventStatusEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/entities/EventsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/entities/EventsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/entities/FinancesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/entities/FinancesEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/entities/UserTypeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/entities/UserTypeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/entities/UsersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/entities/UsersEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +149,7 @@
       <option name="presentableId" value="Default" />
       <updated>1623004925435</updated>
       <workItem from="1623006336855" duration="7026000" />
-      <workItem from="1623021875112" duration="15613000" />
+      <workItem from="1623021875112" duration="18257000" />
     </task>
     <servers />
   </component>

@@ -12,4 +12,8 @@ public class BaseEntity {
     public void setConnection(Connection connection) {
         this.connection = connection;
     }
+
+    public boolean hasConnection() {
+        return (this.connection != null);
+    }
 }

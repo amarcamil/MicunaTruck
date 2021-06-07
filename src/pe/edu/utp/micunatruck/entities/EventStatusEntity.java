@@ -11,7 +11,7 @@ public class EventStatusEntity extends BaseEntity {
     private static String DEFAULT_SQL = "SELECT * FROM micunatruck.event_status";
     private List<EventStatus> findByCriteria(String sql) {
         List<EventStatus> eventStatus;
-        if(getConnection() != null) {
+        if(hasConnection()) {
             eventStatus = new ArrayList<>();
             try {
                 ResultSet resultSet = getConnection().createStatement().executeQuery(sql);
@@ -47,7 +47,7 @@ public class EventStatusEntity extends BaseEntity {
     }
 
     private int updateByCriteria(String sql) {
-        if(getConnection() != null) {
+        if(hasConnection()) {
             try {
                 return getConnection()
                         .createStatement()
@@ -65,7 +65,7 @@ public class EventStatusEntity extends BaseEntity {
 
     private int getMaxId() {
         String sql = "SELECT MAX(id) AS max_id FROM event_status";
-        if(getConnection() != null) {
+        if(hasConnection()) {
             try {
                 ResultSet resultSet = getConnection()
                         .createStatement()
@@ -82,7 +82,7 @@ public class EventStatusEntity extends BaseEntity {
 
     public EventStatus create(String name) {
         if(findByName(name) == null) {
-            if(getConnection() != null) {
+            if(hasConnection()) {
                 String sql = "INSERT INTO event_status(id, name) VALUES(" +
                         String.valueOf(getMaxId() + 1) + ", '" +
                         name + "')";
