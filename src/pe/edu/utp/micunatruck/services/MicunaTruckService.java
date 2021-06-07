@@ -25,7 +25,7 @@ public class MicunaTruckService {
     private Connection getConnection() {
         if (connection==null){
             try {
-                connection=((DataSource) InitialContext.doLookup("jdbc/MySQLDataSourceMicunaTruck"))
+                connection = ((DataSource)InitialContext.doLookup("jdbc/MySQLDataSourceMicunaTruck"))
                         .getConnection();
             } catch (SQLException | NamingException e) {
                 e.printStackTrace();

@@ -193,6 +193,7 @@
 
     <!-- LOGOUT -->
     <navigation-rule>
+        <from-view-id></from-view-id>
         <navigation-case>
             <from-action>#{authsBean.logout}</from-action>
             <from-outcome>success</from-outcome>

@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="MicunaTruck:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/MicunaTruck_war_exploded</output-path>
+    <output-path>$PROJECT_DIR$/out/artifacts/micunatruck</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="MicunaTruck/web/Web" />
       <element id="directory" name="WEB-INF">
