@@ -7,13 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c60f80fb-0706-4a57-a07f-e052d1485f78" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/fc7ca1d3-ea08-45f6-9e96-545a6d6c44ee.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/fc7ca1d3-ea08-45f6-9e96-545a6d6c44ee/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/fc7ca1d3-ea08-45f6-9e96-545a6d6c44ee/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/fc7ca1d3-ea08-45f6-9e96-545a6d6c44ee/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/fc7ca1d3-ea08-45f6-9e96-545a6d6c44ee/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/MicunaTruck_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/MicunaTruck_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MicunaTruck.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MicunaTruck.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/services/MicunaTruckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pe/edu/utp/micunatruck/services/MicunaTruckService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/beans.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/faces-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/bower.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +149,7 @@
       <option name="presentableId" value="Default" />
       <updated>1623004925435</updated>
       <workItem from="1623006336855" duration="7026000" />
-      <workItem from="1623021875112" duration="14740000" />
+      <workItem from="1623021875112" duration="15613000" />
     </task>
     <servers />
   </component>
@@ -161,6 +166,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
